@@ -1,41 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbarr from './components/Navbar';
-import { Provider, useDispatch } from 'react-redux';
-import { Addcounteraction, Minuscounteraction } from './Store/Action';
-import store from './Store';
-// import StoreApp from './components/Store App';
+// import logo from './logo.svg';
+
+import { Typography } from '@mui/material';
 import { Route, Routes } from 'react-router-dom';
-import LogIn from './screens/Login';
-import SignUp from './screens/SignUp';
-import ProtectedRoute from "./protectedRoutes"
-import StoreApp from './screens/Home';
-import About from './screens/About';
-import AddCart from './screens/AddToCart';
-import Card from './components/cards/Cards';
-import Cardss from './components/cards/Cards';
+import './App.css';
+import Home from './components/Home';
+import Company from './screens/compant';
+import Ir from './screens/IR';
+import Mobility from './screens/Mob';
+import Newsroom from './screens/News';
+import Sustainblity from './screens/sustainble';
+
+// import StoreApp from './components/Store App';
 
 function App() {
   return(
   <>
-  {/* <StoreApp /> */}
-
-    <Routes>
-      <Route path="/" element={<LogIn />}></Route>
-      <Route path="/signup" element={<SignUp />}></Route>
-
-      <Route element={<ProtectedRoute />}>
-      <Route path="/storeapp" element={<StoreApp />}></Route>
-      </Route>
-
-      <Route path='/about' element={<About />}></Route>
-      <Route path='/cart' element={<AddCart />}></Route>
-      {/* <Route path='/card' element={<Cardss/>}></Route> */}
+   {/* <Typography variant='h2' component="a" sx={{display:{xs:"flex", md:"none"}}}>
+    Hello World
+   </Typography> */}
 
 
-
-    </Routes>
-
+   <Routes>
+   <Route path="/" element={<Home />} />
+   <Route path="/company" element={<Company />} />  
+   <Route path="/news" element={<Newsroom />} />  
+   <Route path="/mobility" element={<Mobility />} /> 
+   <Route path="/sustain" element={<Sustainblity />} />  
+   <Route path="/ir" element={<Ir />} />  
+   </Routes>
   </>
   )
 }

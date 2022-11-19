@@ -1,10 +1,10 @@
-import { createStore  } from "redux";
-import { applyMiddleware  } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
+import { cartSlice } from "./CartSlice";
+import productSlice from "./productSlice";
 
-import thunk from "redux-thunk";
-import  combineReducer from "./REducer/CombineReducer";
-// import { addCounterreducer } from "./REducer/reducer";
-
-
-const store = createStore(combineReducer, {} , applyMiddleware(thunk));
-export default store
+export const store = configureStore({
+    reducer : {
+      cart : cartSlice,  
+      products : productSlice,
+    }
+})
