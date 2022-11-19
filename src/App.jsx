@@ -14,6 +14,7 @@ import About from './screens/About';
 import AddCart from './screens/AddToCart';
 import Card from './components/cards/Cards';
 import Cardss from './components/cards/Cards';
+import Contact from './screens/Contact';
 
 function App() {
   return(
@@ -30,6 +31,8 @@ function App() {
 
       <Route path='/about' element={<About />}></Route>
       <Route path='/cart' element={<AddCart />}></Route>
+      <Route path='/contact' element={<Contact />}></Route>
+
       {/* <Route path='/card' element={<Cardss/>}></Route> */}
 
 

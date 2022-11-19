@@ -6,7 +6,7 @@ import { ActionTypes } from "../ACTIONTYPE"
 const INITIALSTATE = {
     data : [],
     loadingData : false, 
-    cartitem : [],
+    cartitem : ([]),
 }
 
 const ProductReducer = (state = INITIALSTATE, action)=>{
@@ -49,10 +49,12 @@ const AddToCartReducer = (state = INITIALSTATE, action)=>{
             return{
                 ...state,
                 cartitem: [...product],
-            }    
-
+            }  
+        
         default:
            return state
 }
 }
+
+
 export {ProductReducer, AddToCartReducer}

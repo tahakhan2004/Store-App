@@ -1,7 +1,7 @@
 import { ActionTypes } from "../ACTIONTYPE"
 
 const INITIALSTATE = {
-    globalCounter : 0,
+    globalCounter : 1,
 }  
 
 const addCounterreducer = (state= INITIALSTATE, action) =>{
@@ -12,12 +12,26 @@ const addCounterreducer = (state= INITIALSTATE, action) =>{
         }    
 
         case ActionTypes.MINUS_COUNTER:
+           if(state.globalCounter <= 0){
+              state.globalCounter = 1
+           }
         return{
             globalCounter: --state.globalCounter,
+            
         }
+  
         default:
             return{...state}
     }
 }
 
 export {addCounterreducer}
+
+
+
+
+
+// if(state.globalCounter <= 0){
+//     state.globalCounter === 0
+// }
+

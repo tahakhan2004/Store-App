@@ -8,6 +8,7 @@ const ProductAction =  ()=>{
           type : ActionTypes.GET_PRODUCT_LOADING,
          }) 
        const data = await axios.get("https://dummyjson.com/products")
+       console.log(data);
         dispatch({
           type: ActionTypes.GET_PRODUCT,
           payload : data.data.products, 
@@ -42,4 +43,8 @@ const RemovetoCartAction = (product) =>{
     })
   }
 }
+
+
+
+
 export {ProductAction, AddtoCartAction , RemovetoCartAction}

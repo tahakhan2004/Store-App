@@ -37,14 +37,15 @@ const Navbarr = () => {
        <div className=' first'> 
       <img
       src='./logo.png'
-      className='img'
-      alt='...' width={60}
+      className='img mb-4'
+      alt='...' width={50}
     />
-    <h3 className='ms-md-1'><span className='naam'>Best</span><span className='namee'>Buy<sup>&#8482;</sup></span></h3>
+    <span className='fs-2 ms-md-1'><span className='naam'>Best</span><span className='namee'>Buy<sup>&#8482;</sup></span></span>
     </div>
         <Navbar.Brand href="#"></Navbar.Brand>
-        <Navbar.Toggle className=' ms-auto' aria-controls={`offcanvasNavbar-expand-${expand}`} />
-        <Navbar.Offcanvas
+        <Navbar.Toggle className=' ms-auto ' aria-controls={`offcanvasNavbar-expand-${expand}`} />
+        <Navbar.Offcanvas 
+        className="togg"
           id={`offcanvasNavbar-expand-${expand}`}
           aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
           placement="end"
@@ -55,20 +56,16 @@ const Navbarr = () => {
             </Offcanvas.Title>
           </Offcanvas.Header>
           <div className=''>
-          <Offcanvas.Body>
+          <Offcanvas.Body className=''>
             
             <Nav className="justify-content-center  flex-grow-1 d-flex navs">
               <NavLink to="/storeapp" className='pe-lg-5 me-lg-5 pe-md-3 me-md-3 fs-4 navs'>Home</NavLink>
               <NavLink to="/about" className='pe-lg-5 me-lg-5 pe-md-3 me-md-3 fs-4 navs'>About</NavLink>
-              <NavLink to="" className='pe-lg-5 me-lg-5 pe-md-3 me-md-3 fs-4 navs'>Contact Us</NavLink>
-              <NavLink to=""  className='pe-lg-5 me-lg-5 pe-md-3 me-md-3 fs-4 navs'>Services</NavLink>
+              <NavLink to="/contact" className='pe-lg-5 me-lg-5 pe-md-3 me-md-3 fs-4 navs'>Contact Us</NavLink>
+              <NavLink to="/service"  className='pe-lg-5 me-lg-5 pe-md-3 me-md-3 fs-4 navs'>Services</NavLink>
               </Nav>
               
               {/* <NavLink to="/cart" className='pe-md-5 me-md-5 fs-4 navs'>Services</NavLink> */}
-            
-         
-        
-            
             
              {/* <i className="bi bi-bag-plus"></i> */}
           </Offcanvas.Body>
@@ -78,7 +75,7 @@ const Navbarr = () => {
           <div className=''>
             <span data-hover = "logout" className='hovertext'>
             <AiOutlineLogout
-            className='me-2 icon ' 
+            className='me-2 icon' 
             size={45}
             onClick={logoutHandler} />
             </span>
